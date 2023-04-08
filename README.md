@@ -6,7 +6,7 @@ project is based on one template available on the internet
 that allow me to learn by interacting with the source code
 HTML and CSS.
 
-My webpage - [https://andvsilva.github.io/andrevsilva/](https://andvsilva.github.io/andrevsilva/)
+My webpage - [https://andvsilva.github.io/andrevsilva-dev/](https://andvsilva.github.io/andrevsilva-dev/)
 
 
 # Useful Resources
