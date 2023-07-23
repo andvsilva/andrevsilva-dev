@@ -14,3 +14,4 @@ My webpage - [https://andvsilva.github.io/andrevsilva-dev/](https://andvsilva.gi
 - [CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/)
 
 - [Web Development Tools](https://github.com/zero-to-mastery/resources/blob/master/WebDevTools.md)
+-  The blog style was based on this template with the source code storage [here](https://github.com/xriley/DevBlog-Theme).
