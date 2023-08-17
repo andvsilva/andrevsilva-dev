@@ -30,7 +30,6 @@
 
 .article-box p {
   margin-bottom: 5px;
-
 }
 
 .article-box a {
@@ -42,9 +41,4 @@
   border-radius: 5px;
   text-decoration: none;
 }
-
-body {
-    font-size: 40px;
-    font-family: SF Mono;
-  }
   
