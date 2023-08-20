@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\begin{document}
+\section*{CONHECIMENTOS ESPECÍFICOS - IFSC junho 2023}
+\section*{Q21}
+Suponha uma expedição espacial em direção ao sistema planetário mais próximo do
+nosso, Alpha Centauri, que está localizado a uma distância média de 4,22 anos-luz da Terra. Se a
+expedição viajar a uma velocidade correspondente a 60\% da velocidade da luz, qual seria,
+aproximadamente, a diferença, em anos, entre o tempo medido pelos astronautas durante a viagem
+e o tempo medido na Terra?
+
+\begin{enumerate}
+\item A) 0,84 anos.
+\item B) 1,06 anos.
+\item \textbf{\Large C) 1,41 anos.}
+\item D) 1,69 anos.
+\item E) 2,81 anos.
+\end{enumerate}
+
+\textbf{RESOLUCAO}
+
+A fórmula para a dilatação do tempo é:
+
+\[ \Delta t' = \frac{\Delta t}{\sqrt{1 - \frac{v^2}{c^2}}} \]
+
+Onde:
+\begin{itemize}
+\item \( \Delta t' \) é o intervalo de tempo medido pelos astronautas na nave.
+\item \( \Delta t \) é o intervalo de tempo medido na Terra.
+\item \( v \) é a velocidade da nave (0,6 vezes a velocidade da luz, ou \( 0,6c \)).
+\item \( c \) é a velocidade da luz.
+\end{itemize}
+Nesse caso, a distância até Alpha Centauri é de 4,22 anos-luz e a velocidade da nave é \( 0,6c \).
+
+Primeiro, vamos calcular o intervalo de tempo medido ($\Delta t$) pelo observador na terra:
+
+\begin{equation}
+    0.6c = \frac{4,22 \textrm{ anos-luz}}{\Delta t} 
+\end{equation}
+    
+\begin{equation} 
+    \Delta t = \frac{4,22}{0,6c} = 7,033 \textrm{ anos}
+\end{equation}
+
+Agora, vamos calcular o intervalo de tempo medido pelos astronautas na nave:
+
+\begin{equation} 
+\Delta t = \gamma\Delta t'
+\end{equation}
+
+\begin{equation}
+    \gamma = \frac{1}{1-\frac{v^2}{c^2}} = \frac{1}{1-(0.6)^2} = 1.25
+\end{equation}
+
+Agora, usamos a fórmula da dilatação do tempo para encontrar a diferença de tempo entre os astronautas e a Terra:
+
+\begin{equation} 
+    7,033 = 1.25\Delta t' \rightarrow \Delta t' = \frac{7,03}{1.25} = 5.624 \textrm{anos}
+\end{equation}
+
+Portanto, a diferença aproximada entre o tempo medido pelos astronautas durante a viagem e o tempo medido na 
+Terra \'e 7,033 anos - 5.624 anos = 1.406 anos. \textbf{RESPOSTA C. 1.41 ANOS}
+    
+\end{document}
