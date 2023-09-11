@@ -1,448 +1,305 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
-    <title>Finance</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- FontAwesome JS-->
-	<script defer src="assets/fontawesome/js/all.min.js"></script>
-    
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/risen.css">
-
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3982955326140985"
-     crossorigin="anonymous"></script>
-
-	<style>
-        @font-face {
-            font-family: 'SF Mono';
-            src: url('sfmono-regular.ttf') format('truetype');
-            /* Add more formats (e.g., woff, woff2) for better browser compatibility */
-        }
-
-        body {
-            font-family: 'Charter', serif;
-			font-size: 18px; /* Set your desired font size here */
-        }
-    </style>
-	 
-</head> 
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
 <body>
-    
-    <header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a class="no-text-decoration" href="profile/aboutme.html">Finance, Money and Investments! </a></h1>
-        
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
-           
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+      <header>
+    <!-- Intro settings -->
+    <style>
+      #intro {
+        /* Margin to fix overlapping fixed navbar */
+        margin-top: 58px;
+      }
+      @media (max-width: 991px) {
+        #intro {
+          /* Margin to fix overlapping fixed navbar */
+          margin-top: 45px;
+        }
+      }
+    </style>
 
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" width=100px>			
-					
-					<div class="bio mb-3" style="color: #ffffff;">Hi, my name is Andre. Briefly introduce yourself here.<br><a href="profile/aboutme.html">Find out more about me</a></div><!--//bio-->
-					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="https://twitter.com/andvsilva_"><i class="fab fa-twitter fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/andre-v-silva/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://github.com/andvsilva"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			        </ul><!--//social-list-->
-			        <hr> 
-				</div><!--//profile-section-->
-				
-				<!--
-				<ul class="navbar-nav flex-column text-start">
-					<li class="nav-item">
-					    <a class="nav-link active" href="https://andrevsilva.com/"><i class="fas fa-home fa-fw me-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="blogpost.html"><i class="fas fa-bookmark fa-fw me-2"></i>Blog Post</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="https://andrevsilva.com/"><i class="fas fa-user fa-fw me-2"></i>About Me</a>
-					</li>
-				</ul>
-				-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="16" alt="" loading="lazy"
+            style="margin-top: -3px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#intro">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">Learn Bootstrap 5</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Download MDB UI KIT</a>
+            </li>
+          </ul>
 
-				<div class="my-2 my-md-3">
-				    <a class="btn btn-primary" href="profile/aboutme.html" target="_blank">Get in Touch</a>
-				</div>
-			</div>
-		</nav>
-    </header>
-    
-    <div class="main-wrapper">
-	    
-	    <section class="cta-section theme-bg-light py-5">
-		    <div class="container text-center single-col-max-width">
-			    <h2 class="heading">Mastering the Art of Financial Growth</h2>
-			    <div class="intro" style="color: #ffffff; font-size: 25px">
+          <ul class="navbar-nav d-flex flex-row">
+            <!-- Icons -->
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
+                target="_blank">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
 
-					Welcome to our finance blog, where we embark on a journey through the intricate 
-					world of money matters, investments, savings strategies, and the ever-evolving 
-					landscape of personal and global finance. In an era where financial literacy is 
-					increasingly vital, our blog aims to be your trusted companion on this expedition 
-					towards financial enlightenment.
+    <!-- Jumbotron -->
+    <div id="intro" class="p-5 text-center bg-light">
+      <h1 class="mb-3 h2">Finance, Money and Investments!</h1>
+      <p class="mb-3">
+		<h5>Welcome to our finance blog, where we embark on a journey through the intricate 
+		world of money matters, investments, savings strategies, and the ever-evolving 
+		landscape of personal and global finance. 
 
-					Money, as they say, makes the world go round, and understanding its intricacies 
-					can be a powerful tool. Whether you're a seasoned investor looking for the latest 
-					market insights, a recent graduate navigating the complexities of student loans 
-					and budgeting, or simply someone who wants to make more informed financial decisions, 
-					our blog is designed to cater to a wide range of financial interests and expertise 
-					levels.
+		Our mission is clear: to demystify the world of finance and empower you with the 
+		knowledge and tools to make sound financial choices. We believe that financial 
+		literacy is a cornerstone of personal empowerment and that anyone, regardless of 
+		their background or experience, can take control of their financial future.</h5>
 
-					Our mission is clear: to demystify the world of finance and empower you with the 
-					knowledge and tools to make sound financial choices. We believe that financial 
-					literacy is a cornerstone of personal empowerment and that anyone, regardless of 
-					their background or experience, can take control of their financial future.
+	  </p>
+      <a class="btn btn-primary m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow"
+        target="_blank">Start tutorial</a>
+      <a class="btn btn-primary m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank"
+        role="button">Download MDB UI KIT</a>
+    </div>
+    <!-- Jumbotron -->
+  </header>
+  <!--Main Navigation-->
 
-					In the coming articles, we'll explore a multitude of financial topics, from personal 
-					finance fundamentals like budgeting and saving, to investment strategies, retirement 
-					planning, and staying up-to-date with the ever-evolving financial landscape. We'll 
-					also delve into the psychological aspects of money management, discussing how our 
-					attitudes and behaviors influence our financial well-being.
+  <!--Main layout-->
+  <main class="my-5">
+    <div class="container">
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Latest posts</strong></h4>
 
-					Our team of financial experts, writers, and researchers is committed to delivering 
-					well-researched, insightful, and practical content that you can apply to your own 
-					financial journey. We'll provide tips, strategies, and real-world examples to help 
-					you navigate the complexities of finance with confidence.
-					So, whether you're here to gain a deeper understanding of financial markets, 
-					learn how to save and invest, or simply seek clarity on managing your personal 
-					finances, you're in the right place. Join us on this exciting voyage through 
-					the world of finance, where we'll uncover the secrets to financial success and 
-					help you achieve your financial goals. Together, let's embark on this educational 
-					and transformative journey towards financial empowerment.
-				
-				</div>
-		    </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
 
-			<div class="article-box">
-				<h2>Mastering Money: The Vital Role of Personal Finance Management</h2>
-				<p style="text-align:center;"></p><img class="img-fluid post-thumb " src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*cSpKMT-Cr6nkTSrP96pdCA.png" alt="image" width="700" height="500"></p>
-				<p> <h5>Personal finance is not just about managing money, it also involves developing the right mindset 
-					and habits for financial success.</h5>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
 
-					Money is an integral part of our lives, influencing nearly every aspect of our existence. 
-					Yet, many people struggle to manage their finances effectively. The art of mastering money 
-					isn't just about accumulating wealth; it's about creating financial security, achieving your 
-					life goals, and reducing stress. Personal finance management plays a vital role in this journey. 
-					In this article, we'll explore why personal finance management is crucial and how it can empower 
-					you to take control of your financial future.
-					<h4>The Significance of Personal Finance Management</h4>
-					<h4>Financial Security:</h4>
-					One of the primary reasons to master personal finance is to establish financial security. A solid 
-					financial plan provides a safety net for unexpected events such as medical emergencies, job loss, or 
-					unforeseen expenses. By managing your finances wisely, you can build an emergency fund that offers 
-					peace of mind in challenging times.
-					Personal finance management helps you avoid falling into excessive debt. It teaches you to use credit 
-					responsibly and develop strategies to pay off debts efficiently. Reducing or eliminating high-interest 
-					debts can free up resources for other financial goals.
-					<h4>Debt Management:</h4>
-					Effective personal finance management is the foundation for wealth creation. By budgeting, saving, and 
-					investing wisely, you can grow your wealth over time. Compound interest can work in your favor, turning 
-					small investments into substantial assets.
-					<h4>Wealth Building:</h4>
-					Whether your goals include buying a home, starting a business, or traveling the world, personal finance 
-					management is the key to achieving them. Creating a financial plan allows you to allocate resources 
-					toward your specific objectives, making them more attainable.
-					<h4>Goal Achievement:</h4>
-					Financial stress can have a detrimental impact on your overall well-being. Managing your finances well 
-					reduces anxiety about money matters, leading to improved mental and emotional health.
-					<h4>Reducing Stress:</h4>
-					<h4>Steps to Mastering Personal Finance</h4>
-					Create a monthly budget that outlines your income and expenses. Tracking your spending habits allows 
-					you to identify areas where you can cut costs and save more money.
-					<h4>Budgeting:</h4>
-					Establish an emergency fund that can cover at least three to six months' worth of living expenses. 
-					This fund acts as a financial cushion during unexpected setbacks.
-					<h4>Emergency Fund:</h4>
-					Develop a strategy for paying down high-interest debts, such as credit card balances or student 
-					loans. Consider the snowball or avalanche method to accelerate debt repayment.
-					<h4>Debt Reduction:</h4>
-					Regularly contribute to savings and investment accounts, such as a 401(k) or an individual retirement 
-					account (IRA). Diversify your investments to reduce risk and increase potential returns.
-					<h4>Savings and Investments:</h4>
-					Continuously educate yourself about personal finance. Stay informed about financial news, investment 
-					opportunities, and changes in tax laws.
-					<h4>Financial Education:</h4>
-					Consider consulting a financial advisor or planner to help you create a customized financial plan 
-					tailored to your goals and risk tolerance.
-					<h4>Seek Professional Guidance:</h4>
-					Consider consulting a financial advisor or planner to help you create a customized 
-					financial plan tailored to your goals and risk tolerance.
-					<h4>Conclusion</h4>
-					Mastering money through personal finance management is an essential skill that can positively 
-					impact your life. It's about taking control of your financial destiny, achieving your dreams, and 
-					securing your future. By following sound financial principles, you can build a solid foundation 
-					for financial security, reduce stress, and create a pathway to wealth. Start your journey toward 
-					mastering money today, and enjoy the peace and freedom that come with it.
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				</p>
-			<a href="https://andsilvadrcc.medium.com/mastering-money-the-vital-role-of-personal-finance-management-100867e67eee">Read More</a>
-			  
-			</div>
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/002.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
 
-			<div class="article-box">
-				<h2>Understanding Inflation through the Lens of Austrian Economics</h2>
-				<p style="text-align:center;"></p><img class="img-fluid post-thumb " src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*1gHeM-UzPPi4N1DrQFyyYg.png" alt="image" width="700" height="500"></p>
-				<p> <h5>Making Sense of Inflation: A Beginner’s Guide from Austrian Economics</h5>
-					
-					When we hear the word “inflation,” we often think of prices going up and money losing its value. 
-					But according to a special way of looking at things called Austrian Economics, there’s more to 
-					inflation than just rising prices. Let’s break it down in simpler terms to understand what 
-					Austrian Economics teaches us.
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/022.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
 
-					<h4>What Inflation Means in Austrian Economics</h4>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/new/standard/nature/035.jpg" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Post title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="#!" class="btn btn-primary">Read</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
 
-					Austrian Economics tells us that inflation isn’t just 
-					about prices getting higher. It’s actually about something called 
-					the “money supply” growing bigger. Think of the money supply as all 
-					the money that’s floating around in an economy. When that amount increases 
-					artificially, that’s when we’re talking about inflation in this sense.
+      <!-- Pagination -->
+      <nav class="my-4" aria-label="...">
+        <ul class="pagination pagination-circle justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+  <!--Main layout-->
 
-					<h4>How More Money Can Be a Problem</h4>
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <div class="py-4 text-center">
+      <a role="button" class="btn btn-primary btn-lg m-2"
+        href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
+        Learn Bootstrap 5
+      </a>
+      <a role="button" class="btn btn-primary btn-lg m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank">
+        Download MDB UI KIT
+      </a>
+    </div>
 
-					Imagine you’re playing a game, and suddenly someone gives you extra points 
-					that you didn’t really earn. You might start spending those points recklessly 
-					because they seem like they’re worth a lot. This is a bit like what happens 
-					when there’s too much money around because of inflation.
+    <hr class="m-0" />
 
-					<h4>Distorted Prices and What They Mean</h4>
+    <div class="text-center py-4 align-items-center">
+      <p>Follow MDB on social media</p>
+      <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button"
+        rel="nofollow" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com/mdbootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/MDBootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://github.com/mdbootstrap/mdb-ui-kit" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
 
-					Inflation messes with how prices usually work. Imagine if the price of your 
-					favorite toy suddenly went way up, not because more people want it, but because 
-					there’s too much extra money in the game. This makes it hard to know what things 
-					are really worth and causes confusion.
-
-					<h4>The Up and Down Cycle</h4>
-
-					Austrian Economics also teaches us about something called the “business cycle.” 
-					This is like a roller coaster ride for the economy. When there’s too much extra 
-					money around, it’s like the economy is on a high, and everyone feels great. But 
-					then, because things got a bit out of control, the economy crashes down like a 
-					roller coaster coming down fast.
-
-					<h4>Long-Term Effects to Keep in Mind</h4>
-
-					It might not be easy to see the problems that come with inflation right away. 
-					Imagine if you spent all your extra points on things that you can’t really use 
-					or enjoy for long. That’s what happens when businesses invest too much in stuff 
-					that isn’t really going to help in the long run.
-
-					<h4>A Better Way with “Sound Money”</h4>
-
-					Austrian Economics suggests a different way to handle money. They talk about 
-					using something real, like gold or silver, as money. This way, there’s only a 
-					set amount of money available, and it can’t just keep growing artificially. 
-					It’s like playing a game where you can’t magically create more points — everything 
-					stays balanced.
-
-					According to Austrian Economics, inflation is defined as an increase in the supply 
-					of money and credit within an economy. This definition focuses on the monetary 
-					factors driving inflation rather than solely on changes in price levels. Austrian economists 
-					emphasize the importance of the money supply and its effects on the allocation of resources, 
-					economic coordination, and the overall structure of production.
-
-					<h4>Key points in the Austrian Economics definition of inflation include:</h4>
-
-					<ol>
-						<li><strong>Monetary Expansion:</strong> Austrian Economics stresses that inflation is primarily caused by the 
-					central bank increasing the money supply or by fractional reserve banking, which allows for 
-					the creation of new money through lending.</li>
-
-						<li><strong>Distorted Price Signals:</strong> The increased money supply leads to a distortion of price signals 
-					throughout the economy. Prices are influenced not only by changes in supply and demand for goods and services 
-					but also by the increase in money supply.</li>
-
-						<li><strong>Misallocation of Resources:</strong> As a result of distorted price signals, resources are 
-					allocated inefficiently, and investments are made in areas that might not be sustainable in the absence 
-					of the artificial increase in money supply.</li>
-
-						<li><strong>Business Cycle Theory:</strong> Austrian Economics is closely associated with the theory of the 
-					business cycle, which asserts that monetary expansions and contractions are the root causes of economic booms and busts.</li>
-
-						<li><strong>Long-Term Effects:</strong> Austrian economists emphasize that the negative effects of 
-					inflation might not be immediately apparent but can have long-term consequences for the economy, 
-					including malinvestments, wealth redistribution, and a potential erosion of savings’ value.</li>
-
-						<li><strong>Sound Money:</strong> Austrian Economics advocates for a sound money system based on a 
-					commodity (like gold or silver), where the money supply is limited by the availability of the 
-					underlying commodity. This would prevent the artificial expansion of the money supply and its 
-					associated negative effects.</li>
-					</ol>
-					<h4>In Conclusion</h4>
-
-					Austrian Economics gives us a new way to think about inflation. It’s not just about 
-					prices going up — it’s about the amount of money growing too much. This can mess 
-					up how prices work, cause economic ups and downs, and lead to problems down the road. 
-					By understanding this, we can think about better ways to manage money and keep our 
-					economy on a steadier path.
-
-					That’s it for now. I hope you enjoy! If you like it, follow me and comment 
-					or make a suggestion below.
-
-					Thank you very much for read the article, I appreciate.
-				</p>
-			<a href="https://andsilvadrcc.medium.com/understanding-inflation-through-the-lens-of-austrian-economics-36251da1de8a">Read More</a>
-			  
-			</div>
-
-
-			<div class="article-box">
-				<h2>A Simple Way To Understand the Basic Economics For Beginners</h2>
-				<p style="text-align:center;"></p><img class="img-fluid post-thumb " src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*AxlLDaoLRzPKcL9ZNZ8QTg.png" alt="image" width="700" height="500"></p>
-				<p>Now it’s the best time to start to learn the principles about How money works? And change your life forever. Tomorrow can be too late!
-								
-					<h4>What is Basic Economics?</h4>
-
-					Basic economics is the study of how people make choices under conditions of scarcity. It is the study of how individuals, businesses, governments, and nations make decisions about how to allocate their limited resources.
-
-					<h4>The seven fundamental principles of economics are:</h4>
-
-					<h4>Scarcity principle:</h4> There are not enough resources to satisfy all human wants.
-					Cost-benefit principle: When making a choice, people should consider the costs and benefits of each alternative.
-					Principle of unequal costs: The costs of producing different goods and services are not the same.
-					Principle of comparative advantage: A country should specialize in producing those goods and services in which it has a comparative advantage.
-					Principle of increasing opportunity cost: As a person or country produces more of one good, the opportunity cost of producing that good increases.
-					Equilibrium principle: In a market economy, prices tend to move toward the level where supply equals demand.
-					Greed principle: People are motivated by self-interest.
-					Some Important Concepts in Basic Economics
-
-					<h4>Supply and demand:</h4> The supply of a good or service is the amount that producers are willing to offer for sale at a given price. The demand for a good or service is the amount that consumers are willing to buy at a given price. The price of a good or service is determined by the intersection of supply and demand.
-					<h4>Market failure:</h4> A market failure occurs when the market does not allocate resources efficiently. This can happen due to externalities, monopolies, or public goods.
-					<h4>Government intervention:</h4> Governments can intervene in the market to correct market failures or to achieve other goals, such as full employment or economic growth.
-					<h4>The True Question is How to Learn Basic Economics?</h4>
-
-					There are many ways to learn basic economics. You can find books, articles, and websites that explain the basics of economics in a clear and concise way. You can also take economics courses at a local college or university.
-
-					<h4>Here are some tips for learning basic economics:</h4>
-
-					Start with the basics. Don’t try to learn everything at once. Start with the fundamental principles and then build on that knowledge.
-					Use real-world examples. Economics is a social science, so it’s important to understand how the principles apply to the real world. Look for examples of supply and demand, market failures, and government intervention in the news and in your own life.
-					Get involved. There are many ways to get involved in economics. You can volunteer for an economic development organization, join an economics club, or take a class on economics at a local community college.
-					The Importance of Understanding Basic Economics
-
-					Understanding basic economics can help you make better decisions about your own finances and about the economic policies that affect your life. It can also help you understand the world around you and how it works.
-
-					If you’re interested in learning more about basic economics, I encourage you to check out the resources I mentioned above. With a little effort, you can learn the basics of economics and start applying them to your own life.
-
-					I hope this article was helpful. Let me know if you have any other questions.
-
-					The next articles I will deep dive in to the Economics, be patience, the journey will take a long time!
-
-					All the best!
-				</p>
-			<a href="https://medium.com/@andsilvadrcc/a-simple-way-to-understand-the-basic-economics-for-beginners-95f7406a78bf">Read More</a>
-			  
-			</div>
-
-
-			<div class="article-box">
-				<h2>Achieving Financial Freedom</h2>
-				<p style="text-align:center;"></p><img class="img-fluid post-thumb " src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*pQRF-h3IdnQz3BQUphKxIQ.png" alt="image" width="400" height="300"></p>
-				<p>Steps to Take Control of Your Finances and Build a Secure Future...
-								
-					I’m thrilled to welcome you to my finance blog, where we’ll embark on an exciting journey through the world of money, 
-					investments, and financial wisdom. My name is Andre V Silva, and I’m passionate about all things related to personal finance and wealth-building.
-				
-					<h4>A Bit About My Background:</h4>
-
-					I have a PhD in Physics and have spent the last 5 years studying the financial industry and personal finance, gaining valuable insights into the 
-					complexities and opportunities that this field offers.
-					
-					<h4>The Inspiration Behind This Blog:</h4>
-					Throughout my career, I’ve noticed a common thread that unites people from all walks of life — the desire for financial security and a better 
-					understanding of managing their money effectively. Whether it’s achieving short-term goals like paying off debt or long-term dreams like early 
-					retirement, I’m driven to share my knowledge and expertise to empower my readers to take charge of their financial destinies.
-					
-					<h4>What You Can Expect:</h4>
-					
-					In this blog, you can look forward to a wide range of articles covering diverse financial topics. From budgeting and saving tips to demystifying 
-					investment strategies, I aim to make finance accessible and relatable to everyone. I’ll also share insights into the latest trends in the financial 
-					world and provide analysis that can help you stay informed and make sound financial choices.
-
-					<h4>Engage and Connect:</h4>
-					I believe that learning is a two-way street, and I’m eager to engage with each of you. Whether you’re a seasoned investor or just starting to dip 
-					your toes into personal finance, your thoughts, questions, and feedback are always welcome here. Let’s foster a vibrant community where we can learn 
-					and grow together!
-					
-					<h4>Disclaimer:</h4>
-					Before we begin, it’s essential to note that the information provided in this blog is for educational purposes only. While I strive to offer accurate and up-to-date content, financial circumstances can vary, and it’s crucial to consult with a qualified professional before making any significant financial decisions.
-					Thank you for joining me on this enriching journey. I’m excited about the potential that lies ahead, and I can’t wait to share valuable insights that will help you achieve your financial aspirations!
-					It’s time to start a new journey!
-					
-					Let’s get started!
-				</p>
-			<a href="https://medium.com/@andsilvadrcc/achieving-financial-freedom-e9ce552e3600">Read More</a>
-			  
-			</div>
-
-				<div class="article-box">
-					<h2>Financial Frontier: Navigating the Path to Prosperity</h2>
-					<p style="text-align:center;"></p><img class="img-fluid post-thumb " src="https://miro.medium.com/v2/resize:fill:168:168/1*3Zne3FhO0qBPrLjoTUGtsg.png" alt="image" width="400" height="300"></p>
-					<p>Mastering the Art of Financial Growth. 
-									
-						I’m thrilled to welcome you to my finance blog, where we’ll embark on an exciting journey through the world of money, 
-						investments, and financial wisdom. My name is Andre V Silva, and I’m passionate about all things related to personal finance and wealth-building.
-					
-						<h4>A Bit About My Background:</h4>
-
-						I hold a PhD in Physics and have spent the last 5 years studying the financial industry and personal finance, gaining valuable insights into the 
-						complexities and opportunities that this field offers.
-						
-						<h4>The Inspiration Behind This Blog:</h4>
-						Throughout my career, I’ve noticed a common thread that unites people from all walks of life — the desire for financial security and a better 
-						understanding of managing their money effectively. Whether it’s achieving short-term goals like paying off debt or long-term dreams like early 
-						retirement, I’m driven to share my knowledge and expertise to empower my readers to take charge of their financial destinies.
-						
-						<h4>What You Can Expect:</h4>
-						
-						In this blog, you can look forward to a wide range of articles covering diverse financial topics. From budgeting and saving tips to demystifying 
-						investment strategies, I aim to make finance accessible and relatable to everyone. I’ll also share insights into the latest trends in the financial 
-						world and provide analysis that can help you stay informed and make sound financial choices.
-
-						<h4>Engage and Connect:</h4>
-						I believe that learning is a two-way street, and I’m eager to engage with each of you. Whether you’re a seasoned investor or just starting to dip 
-						your toes into personal finance, your thoughts, questions, and feedback are always welcome here. Let’s foster a vibrant community where we can learn 
-						and grow together!
-						
-						<h4>Disclaimer:</h4>
-						Before we begin, it’s essential to note that the information provided in this blog is for educational purposes only. While I strive to offer accurate and up-to-date content, financial circumstances can vary, and it’s crucial to consult with a qualified professional before making any significant financial decisions.
-						Thank you for joining me on this enriching journey. I’m excited about the potential that lies ahead, and I can’t wait to share valuable insights that will help you achieve your financial aspirations!
-						It’s time to start a new journey!
-						
-						Let’s get started!
-					</p>
-					<a href="https://andsilvadrcc.medium.com/financial-frontier-navigating-the-path-to-prosperity-fb1494c35cfe">Read More</a>
-				  
-			</div>
-	    </section>
-	    
-	    <footer class="footer text-center py-2 theme-bg-dark">
-		   
-	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="https://themes.3rdwavemedia.com" target="_blank">Andre</a> for Investors</small>
-		   
-	    </footer>
-    
-    </div><!--//main-wrapper-->
-
-       
-    <!-- Javascript -->          
-    <script src="assets/plugins/popper.min.js"></script> 
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-
-    
-
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Footer-->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
-</html> 
-
+</html>
