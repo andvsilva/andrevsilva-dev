@@ -15,6 +15,6 @@ def gettag(kpaper):
     print(f'{kpaper} paper: {keywords}')
 
 
-for kpaper in range(1, 9):
+for kpaper in range(1, 10):
     gettag(kpaper)
 
