@@ -8,15 +8,27 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-locations=['US',
-           'CA',
-           'DE',
-           'NL',
-           'NO',
-           'RO',
-           'CH',
+# free account
+locations=['US', 'CA', 'UK', 'HK', 'FR', 
+           'DE', 'NL', 'CH', 'NO', 'RO', 
            'TR'
            ]
+
+# PRO
+"""
+locations = ['US', 'CA', 'UK', 'HK', 'FR', 'DE', 
+             'NL', 'CH', 'NO', 'RO', 'TR', 'IT', 
+             'ES', 'SE', 'IE', 'DK', 'PL', 'AT', 
+             'CZ', 'HU', 'FI', 'BG', 'BE', 'LV', 
+             'LT', 'PT', 'SK', 'MD', 'HR', 'GR', 
+             'EE', 'AL', 'RS', 'BA', 'CY', 'MK', 
+             'IS', 'UA', 'IN', 'RU', 'AZ', 'IL', 
+             'ZA', 'AR', 'BR', 'CO', 'MX', 'PA', 
+             'PE', 'CL', 'AU', 'NZ', 'JP', 'SG', 
+             'KR', 'TW', 'MY', 'VN', 'TH', 'ID', 
+             'PH', 'KH', 'EC', 'KE', 'GH', 'FA'
+            ]
+"""
 
 def long_sleep():
     ntime = random.randint(60,90)
