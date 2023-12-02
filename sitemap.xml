@@ -63,4 +63,11 @@
     <priority>0.8</priority>
 </url>
 
+<url>
+    <loc>https://andrevsilva.com/11paper.html</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
 </urlset>
