@@ -79,16 +79,14 @@ def click_link(driver):
 
 if __name__ == "__main__":
     
-    driver = wdriver()
+    while True:   
+        driver = wdriver()
 
-    search(driver)
+        search(driver)
 
-    click_link(driver)
+        click_link(driver)
 
-    long_sleep()
-
-    #while True:
-        
+        long_sleep()
 
 #while True:
 
