@@ -1,3 +1,5 @@
+import json
+
 fonts ='''<style>
         ol {
             font-size: 22px;
@@ -8,13 +10,20 @@ fonts ='''<style>
         }
     </style>'''
 
+papernumber=14
+
+# Opening JSON file
+with open("../jsonfile/paperinfo.json", 'r') as openfile:
+ 
+    # Reading from json file
+    json_object = json.load(openfile)
+
 # inputs:
-date = ""
-papernumber = 14
-papername = ""
-author = "Andre V Silva"
-description = ""
-shortintroduction = ""
+date = json_object['date']
+title = json_object['title']
+author= json_object['author']
+introduction = json_object['introduction']
+
 
 paperbody = f"""
 <!DOCTYPE html>
@@ -26,7 +35,7 @@ paperbody = f"""
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>{papername}</title>
+    <title>{title}</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -178,16 +187,16 @@ paperbody = f"""
 
                     <div class="media-wrap entry__media">
                         <div class="entry__post-thumb">
-                            <img src="images/finance/tamb13paper.png" 
-                                 srcset="images/finance/tamb13paper.png 2000w, 
-                                         images/finance/tamb13paper.png 1000w, 
-                                         images/finance/tamb13paper.png 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="" class="center">
+                            <img src="images/finance/tamb{papernumber}paper.png" 
+                                 srcset="images/finance/tamb{papernumber}paper.png 2000w, 
+                                         images/finance/tamb{papernumber}paper.png 1000w, 
+                                         images/finance/tamb{papernumber}paper.png 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="" class="center">
                         </div>
                     </div>
 
                     <div class="content__page-header entry__header">
                         <h1 class="display-1 entry__title">
-                        {papername}
+                        {title}
                         </h1>
                         <ul class="entry__header-meta">
                             <li class="author">By <a href="#0">{author}</a></li>
@@ -200,29 +209,19 @@ paperbody = f"""
 
                     <div class="entry__content">
                         <p class="lead"><span class="drop-cap"></span>
-                        {description}
+                        {introduction}
                         </p>
 
                         <p class="lead drop-cap">
-                        {shortintroduction}
                         </p>
 
                         <p class="lead"><span class="drop-cap"></span>
-                        This article will Guide you to make a financial breakthrough - an authoritative tool in your 
-                        move to achieving financial freedom.
-                        </p>
-
-                        <h2>Navigating Life's Financial Maze:</h2> 
                         
-                        <p class="lead"><span class="drop-cap"></span>
-                        No wonder living in a modern fast-paced world, the management of personal finance seems to be 
-                        quite like figuring out one more complicated puzzle. We all at some point find ourselves in the 
-                        dark about how to start; we are trapped within debt cycles, or as an entrepreneurial labourer 
-                        and see no impact monetarily. Financial freedom would continue to look far away in the distance, 
-                        yet buried within these pages is a treasury of knowledge that will make this dream possible as 
-                        something tangible you can hold.
                         </p>
 
+                        <h2></h2> 
+                        
+                        
 
                         <p class="lead"><span class="drop-cap"></span>
                         That's it for now. Thank you very much for read the article!
@@ -231,38 +230,6 @@ paperbody = f"""
                         <h3>I wish you All the best in life!</h3>
 
 
-<!--
-                        <p>
-                        Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
-                        corrupti dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
-                        similique sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia quam 
-                        venenatis vestibulum. Nulla vitae elit libero, a pharetra augue laboris in sit minim 
-                        cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing 
-                        in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-                        </p>
-        
-                        <ul>
-                            <li>Donec nulla non metus auctor fringilla.
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                    <li>Lorem ipsum dolor sit amet.</li>
-                                </ul>
-                            </li>
-                            <li>Donec nulla non metus auctor fringilla.</li>
-                            <li>Donec nulla non metus auctor fringilla.</li>
-                        </ul>
-        
-                        <p>
-                        Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
-                        corrupti dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
-                        similique sunt in culpa. Aenean eu leo quam. Pellentesque ornare sem lacinia quam 
-                        venenatis vestibulum. Nulla vitae elit libero, a pharetra augue laboris in sit minim 
-                        cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing 
-                        in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-                        </p>
-
--->
                         <p class="entry__tags">
                             <span>Post Tags</span>
         

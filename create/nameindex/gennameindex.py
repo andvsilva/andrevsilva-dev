@@ -4,18 +4,16 @@ papernumber=14
 
 
 # Opening JSON file
-with open(f"../jsonfile/{papernumber}paperinfo.json", 'r') as openfile:
+with open("../jsonfile/paperinfo.json", 'r') as openfile:
  
     # Reading from json file
     json_object = json.load(openfile)
 
-print(json_object)
-
 # inputs:
 date = json_object['date']
-papernumber = json_object['papernumber']
-papername = json_object['papername']
-description = json_object['description']
+title = json_object['title']
+author= json_object['author']
+introduction = json_object['introduction']
 
 # Creating the HTML file
 file_html = open(f"{papernumber}nameindex.html", "w")
@@ -34,7 +32,7 @@ nameindex = f'''
 
 <div class="entry__text">
     <div class="entry__header">
-        <h2 class="entry__title"><a href="{papernumber}paper.html">"{papername}"</a></h2>
+        <h2 class="entry__title"><a href="{papernumber}paper.html">"{title}"</a></h2>
         <div class="entry__meta">
             <span class="entry__meta-cat">
                 <a>Freedom</a>
@@ -46,7 +44,7 @@ nameindex = f'''
     </div>
     <div class="entry__excerpt">
         <p>
-        {description}
+        {introduction}
         </p>
     </div>
 </div>
