@@ -1,4 +1,8 @@
 import json
+import sys
+import os
+
+papernumber = sys.argv[1]
 
 fonts ='''<style>
         ol {
@@ -13,7 +17,7 @@ fonts ='''<style>
 papernumber=14
 
 # Opening JSON file
-with open("../jsonfile/paperinfo.json", 'r') as openfile:
+with open("json/paperinfo.json", 'r') as openfile:
  
     # Reading from json file
     json_object = json.load(openfile)
@@ -23,6 +27,27 @@ date = json_object['date']
 title = json_object['title']
 author= json_object['author']
 introduction = json_object['introduction']
+conclusion = json_object['conclusion']
+
+keys = ['date', 'title', 'author', 'introduction', 'conclusion']
+
+for key in keys:
+    json_object.pop(key, None)
+
+body = ''
+
+for section in json_object:
+    content = json_object[section]
+
+    isection = f"""
+    <h2>{section}:</h2>
+
+    <p class="lead"><span class="drop-cap"></span>
+    {content}
+    </p>
+    """
+
+    body = body + isection
 
 
 paperbody = f"""
@@ -208,19 +233,18 @@ paperbody = f"""
                     </div> <!-- end entry__header -->
 
                     <div class="entry__content">
-                        <p class="lead"><span class="drop-cap"></span>
+
+                        <p class="lead drop-cap">
                         {introduction}
                         </p>
 
-                        <p class="lead drop-cap">
-                        </p>
+                        {body}
+
+                        <h2>Conclusion:</h2>
 
                         <p class="lead"><span class="drop-cap"></span>
-                        
+                        {conclusion}
                         </p>
-
-                        <h2></h2> 
-                        
                         
 
                         <p class="lead"><span class="drop-cap"></span>
@@ -246,31 +270,6 @@ paperbody = f"""
             
                         </p>
                     </div> <!-- end entry content -->
-
-                    <div class="entry__pagenav">
-                        <div class="entry__nav">
-                            <div class="entry__prev">
-                                <a href="#0" rel="prev">
-                                    <span>Previous Post</span>
-                                    Prioritizing Happiness: The Life-Changing Investments
-                                </a>
-                            </div>
-                        </div>
-                    </div> <!-- end entry__pagenav -->
-
-                    <div class="entry__related">
-                        <h3 class="h2">Related Articles</h3>
-
-                        <ul class="related">
-                            <li class="related__item">
-                                <a href="10paper.html" class="related__link">
-                                    <img src="images/finance/9thingsthatchangedmylife.png" alt="">
-                                </a>
-                                <h5 class="related__post-title">Prioritizing Happiness: The Life-Changing Investments</h5>
-                            </li>
-                        </ul>
-                    </div> <!-- end entry related -->
-                
                 </article> <!-- end column large-full entry-->
             </main>
 
@@ -307,10 +306,14 @@ paperbody = f"""
 """
 
 # Creating the HTML file
-file_html = open(f"{papernumber}paper.html", "w")
+file_html = open(f"papertopage/{papernumber}paper.html", "w")
 
 # Adding the input data to the HTML file
 file_html.write(paperbody)
 
 # Saving the data into the HTML file
 file_html.close()
+
+os.system(f'mv papertopage/{papernumber}paper.html ../../')
+
+print('Paper in html ready to publish in my page.')

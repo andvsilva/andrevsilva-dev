@@ -1,10 +1,10 @@
 import json
+import sys
 
-papernumber=14
-
+papernumber = sys.argv[1]
 
 # Opening JSON file
-with open("../jsonfile/paperinfo.json", 'r') as openfile:
+with open("json/paperinfo.json", 'r') as openfile:
  
     # Reading from json file
     json_object = json.load(openfile)
@@ -16,10 +16,10 @@ author= json_object['author']
 introduction = json_object['introduction']
 
 # Creating the HTML file
-file_html = open(f"{papernumber}nameindex.html", "w")
+file_html = open(f"papertopage/{papernumber}paperindex.html", "w")
 
 # html to index
-nameindex = f'''
+headindex = f'''
 <!-- #{papernumber} paper-->
 <article class="masonry__brick entry format-standard animate-this">
     
@@ -53,7 +53,9 @@ nameindex = f'''
 
 
 # Adding the input data to the HTML file
-file_html.write(nameindex)
+file_html.write(headindex)
 
 # Saving the data into the HTML file
 file_html.close()
+
+print('head for index page, All done! :)')
