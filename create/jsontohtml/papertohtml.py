@@ -116,7 +116,7 @@ paperbody = f"""
             <nav class="header__nav-wrap">
 
                 <ul class="header__nav">
-                    <li class="current"><a href="index.html" title="">Home</a></li>
+                    <li class="current"><a href="../index.html" title="">Home</a></li>
                     <!--
                     <li class="has-children">
                         <a href="#0" title="">Categories</a>
