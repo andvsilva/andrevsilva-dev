@@ -14,8 +14,6 @@ fonts ='''<style>
         }
     </style>'''
 
-papernumber=14
-
 # Opening JSON file
 with open("json/paperinfo.json", 'r') as openfile:
  
@@ -70,19 +68,19 @@ paperbody = f"""
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
+    <script src="../js/modernizr.js"></script>
 
     <!-- favicons
     ================================================== -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="../image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="../image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Font size list enumerate -->
@@ -110,7 +108,7 @@ paperbody = f"""
             <div class="header__top">
                 <div class="header__logo">
                     <a class="site-logo" href="index.html">
-                        <img src="images/logo.svg" alt="Homepage">
+                        <img src="../images/logo.svg" alt="Homepage">
                     </a>
                 </div>
             </div> <!-- end header__top -->
@@ -212,10 +210,10 @@ paperbody = f"""
 
                     <div class="media-wrap entry__media">
                         <div class="entry__post-thumb">
-                            <img src="images/finance/tamb{papernumber}paper.png" 
-                                 srcset="images/finance/tamb{papernumber}paper.png 2000w, 
-                                         images/finance/tamb{papernumber}paper.png 1000w, 
-                                         images/finance/tamb{papernumber}paper.png 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="" class="center">
+                            <img src="../images/finance/tamb{papernumber}paper.png" 
+                                 srcset="../images/finance/tamb{papernumber}paper.png 2000w, 
+                                         ../images/finance/tamb{papernumber}paper.png 1000w, 
+                                         ../images/finance/tamb{papernumber}paper.png 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="" class="center">
                         </div>
                     </div>
 
@@ -298,9 +296,9 @@ paperbody = f"""
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
 
 </body>
 """
@@ -314,6 +312,6 @@ file_html.write(paperbody)
 # Saving the data into the HTML file
 file_html.close()
 
-os.system(f'mv papertopage/{papernumber}paper.html ../../')
+os.system(f'mv papertopage/{papernumber}paper.html ../../papers/')
 
 print('Paper in html ready to publish in my page.')

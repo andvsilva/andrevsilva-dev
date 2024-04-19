@@ -24,7 +24,7 @@ headindex = f'''
 <article class="masonry__brick entry format-standard animate-this">
     
 <div class="entry__thumb">
-    <a href="{papernumber}paper.html" class="entry__thumb-link">
+    <a href="papers/{papernumber}paper.html" class="entry__thumb-link">
         <img src="images/finance/tamb{papernumber}paper.png" 
                 srcset="images/finance/tamb{papernumber}paper.png 1x, images/finance/tamb{papernumber}paper.png 2x" alt="">
     </a>
@@ -32,13 +32,13 @@ headindex = f'''
 
 <div class="entry__text">
     <div class="entry__header">
-        <h2 class="entry__title"><a href="{papernumber}paper.html">"{title}"</a></h2>
+        <h2 class="entry__title"><a href="papers/{papernumber}paper.html">"{title}"</a></h2>
         <div class="entry__meta">
             <span class="entry__meta-cat">
                 <a>Freedom</a>
             </span>
             <span class="entry__meta-date">
-                <a href="{papernumber}paper.html">{date}</a>
+                <a href="papers/{papernumber}paper.html">{date}</a>
             </span>
         </div>
     </div>
