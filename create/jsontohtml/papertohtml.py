@@ -142,8 +142,8 @@ paperbody = f"""
                     </li>
                     <li><a href="styles.html" title="">Styles</a></li>
                     -->
-                    <li><a href="page-about.html" title="about">About</a></li>
-                    <li><a href="page-contact.html" title="contact">Contact</a></li>
+                    <li><a href="../page-about.html" title="about">About</a></li>
+                    <li><a href="../page-contact.html" title="contact">Contact</a></li>
                     </ul>  <!-- end header__nav -->
 
                 <ul class="header__social">
