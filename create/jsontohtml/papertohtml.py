@@ -107,7 +107,7 @@ paperbody = f"""
 
             <div class="header__top">
                 <div class="header__logo">
-                    <a class="site-logo" href="index.html">
+                    <a class="site-logo" href="../index.html">
                         <img src="../images/logo.svg" alt="Homepage">
                     </a>
                 </div>
