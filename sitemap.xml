@@ -92,8 +92,15 @@
 </url>
 
 <url>
-    <loc>https://andrevsilva.com/14paper.html</loc>
+    <loc>https://andrevsilva.com/15paper.html</loc>
     <lastmod>2024-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
+    <loc>https://andrevsilva.com/16paper.html</loc>
+    <lastmod>2024-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
 </url>
