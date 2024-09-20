@@ -6,6 +6,8 @@ project is based on one template available on the internet
 that allow me to learn by interacting with the source code
 HTML and CSS.
 
+- my page are host on hostinger - andrevsilva.com
+
 
 # Useful Resources
 - my backup - page: https://gitlab.com/andsilvadrcc/my-web-page-andre-vieira
