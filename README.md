@@ -8,6 +8,7 @@ HTML and CSS.
 
 
 # Useful Resources
+- my backup - page: https://gitlab.com/andsilvadrcc/my-web-page-andre-vieira
 
 - [CS50’s Web Programming with Python and JavaScript](https://cs50.harvard.edu/web/2020/)
 
