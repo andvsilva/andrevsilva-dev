@@ -1,39 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="../css/default.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../index.html#about">About</a>
-            <a href="../index.html#contact">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <h1>Blog</h1>
-        <section class="blog-posts">
-            <article>
-                <h2>Post Title 1</h2>
-                <p><strong>Published on:</strong> January 1, 2025</p>
-                <p>This is the introduction to your first blog post. Click below to read more!</p>
-                <a href="post1.html">Read more...</a>
-            </article>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!-- set language english-->>
+<!--<![endif]-->
 
-            <article>
-                <h2>Post Title 2</h2>
-                <p><strong>Published on:</strong> January 2, 2025</p>
-                <p>This is the introduction to your second blog post. Click below to read more!</p>
-                <a href="post2.html">Read more...</a>
-            </article>
-        </section>
-    </main>
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>Blog Article</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Add animation to my name-->
+    <title>Animate</title> 
+    <style>
+        @keyframes grow {
+            from {
+                font-size: 20px;
+            }
+            to {
+                font-size: 50px;
+            }
+        }
+        h1 {
+            animation-name: grow;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header
+   ================================================== -->
+    <header id="home">
+
+        <nav id="nav-wrap">
+
+            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+            <ul id="nav" class="nav">
+                <li class="current"><a class="smoothscroll" href="../index.html">Home</a></li>
+                <li><a class="smoothscroll" href="../index.html#about">About</a></li>
+                <li><a class="smoothscroll" href="../index.html#contact">Contact</a></li>
+            </ul>
+            <!-- end #nav -->
+        </nav>
+        <!-- end #nav-wrap -->
+        <div class="row banner">
+            <div class="banner-text">
+                <h1 class="responsive-headline">blog here</h1>
+                <h3>
+                    
+                </h3>
+                
+                
+                
+                
+            </div>
+        </div>
+
+        
+
+    </header>
+    <!-- Header End -->
+
+
+    <!-- About Section
+   ================================================== -->
+    <section id="about">
+
+        <div class="row">
+            <div class="nine columns main-col">
+                <h2>About Me</h2>
+
+                <p></p>
+                
+                <div class="row">
+
+                    <div class="columns contact-details">
+
+                        <h2>Contact Details</h2>
+                        <p class="address">
+                            <span>André Vieira da Silva</span><br>
+                            <span>Campinas SP - BRAZIL<br>
+                                  
+                     </span><br>
+                            <span>(19) 9 8165-0211</span><br>
+                            <span>andsilvadrcc@gmail.com</span>
+                            <!-- The text field -->
+                        </p>
+
+                    </div>
+
+                    
+
+                </div>
+                <!-- end row -->
+
+            </div>
+            <!-- end .main-col -->
+
+        </div>
+
+    </section>
+    <!-- About Section End-->
+
+
+    <!-- Resume Section
+   ================================================== -->
+    <section id="resume">
+
+        <!-- Education
+      ----------------------------------------------- -->
+        <div class="row education">
+
+            <div class="three columns header-col">
+                <h1><span>Education</span></h1>
+            </div>
+
+            <div class="nine columns main-col">
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>University</h3>
+                        <p class="info">Undergraduate in physics <span>&bull;</span> <em class="date"></em> August 2013</p>
+        
+
+                    </div>
+
+                </div>
+                <!-- item end -->
+
+                <div class="row item">
+
+                    <div class="twelve columns">
+
+                        <h3>Master</h3>
+                        <p class="info">Master's degree <span>&bull;</span> <em class="date"></em> December 2016</p>
+
+                        <h3>Doctoral</h3>
+                        <p class="info">Ph.D. <span>&bull;</span> <em class="date"></em>August 2020</p>
+
+                    </div>
+
+                </div>
+                <!-- item end -->
+
+            </div>
+            <!-- main-col end -->
+
+        </div>
+        <!-- End Education -->
+
+    <!-- footer
+   ================================================== -->
     <footer>
-        <p>&copy; 2025 Your Website</p>
+
+        <div class="row">
+
+            <div class="twelve columns">
+
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/andre.vieiradasilva.1/"><i class="fa fa-facebook"></i></a> </li>
+                    <!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+                    <li><a href="mailto:andsilvadrcc@gmail.com?subject=gmail&body=gmail"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="www.linkedin.com/in/andre-v-silva/"><i class="fa fa-linkedin"></i></a></li> 
+                    <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+                    <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                    <li><a href="https://github.com/andvsilva"><i class="fa fa-github"></i></a></li> 
+                    <li><a href="https://www.instagram.com/andsilvasp/"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/andvsilva_"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC71fY0PA2e19d1OB1jOghRw"><i class="fa fa-youtube-play" style="font-size:30px;color:rgb(243, 232, 232)"></i></a></li>
+                    <li><a href="https://andsilvadrcc.medium.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16">
+                    <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"/>
+                    </svg>
+                </ul>
+
+                <ul class="copyright">
+                    <li>&copy; Copyright 2025 Andre Vieira da Silva</li>
+                    <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>
+                </ul>
+
+            </div>
+
+            <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+            
+        </div>
+        
     </footer>
+    <!-- Footer End-->
+
+    <!-- Java Script
+   ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="../js/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="../js/jquery.flexslider.js"></script>
+    <script src="../js/waypoints.js"></script>
+    <script src="../js/jquery.fittext.js"></script>
+    <script src="../js/magnific-popup.js"></script>
+    <script src="../js/init.js"></script>
+
 </body>
+
 </html>
