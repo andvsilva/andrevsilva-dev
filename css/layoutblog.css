@@ -22,7 +22,7 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body { background-color: #181817; }
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -30,12 +30,12 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
-   height: 20px;
-   min-height: 20px;
-   width: 100%;
-   /* background: #131312 url(../images/financial_freedom.png) no-repeat top center; */
-   background-size: cover !important;
-	-webkit-background-size: cover !important;
+   width: 100vw; 
+   margin: 10 auto;
+   background-color: #161616; /* Cor de fundo aplicada */
+   /* background-image: url("../images/financial_freedom.png"); */
+   background-repeat: no-repeat;
+   background-position: top center;
    text-align: center;
    overflow: hidden;
 }
@@ -44,15 +44,15 @@ header {
 header:before {
    content: '';
    display: inline-block;
-   vertical-align: middle;
-   height: 90%;
+   vertical-align: left;
+   height: 20%;
 }
 header .banner {
    display: inline-block;
    vertical-align: middle;
    margin: 0 auto;
    width: 85%;
-   padding-bottom: 30px;s
+   padding-bottom: 30px;
    text-align: center;
 }
 
@@ -109,7 +109,7 @@ header .scrolldown a {
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
+   color: #f8f3f3;
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
@@ -169,7 +169,8 @@ ul#nav li a {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: #fff;
+   color: #edece9;
+   font-size: 18px;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -194,7 +195,7 @@ ul#nav li.current a { color: #F06000; }
 }
 
 #about a, #about a:visited  { color: #fff; }
-#about a:hover, #about a:focus { color: #11ABB0; }
+#about a:hover, #about a:focus { color: #b03e11; }
 
 #about h2 {
    font: 22px/30px 'opensans-bold', sans-serif;
@@ -254,13 +255,13 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #articles {
-   background: #fff;
+   background: #f5f7f4;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
 }
 
-#articles a, #articles a:visited  { color: #098cf7; } /*-- link color for the articles --*/
+#articles a, #articles a:visited  { color: #0a93f5; } /*-- link color for the articles --*/
 #articles a:hover, #articles a:focus { color: #313131; }
 
 #articles h1 {
@@ -274,7 +275,7 @@ ul#nav li.current a { color: #F06000; }
    margin-left: -120px;
 }
 #articles h3 {
-   font: 20px/30px 'opensans-bold', sans-serif;
+   font: 10px/30px 'opensans-bold', sans-serif;
    color: #0b3ef4;
 }
 
@@ -284,7 +285,7 @@ ul#nav li.current a { color: #F06000; }
 .education, .work {
    margin-bottom: 48px;
    padding-bottom: 24px;
-   border-bottom: 1px solid #E8E8E8;
+   border-bottom: 0.3px solid #161414;
 }
 #articles .info {
    font: 16px/24px 'librebaskerville-italic', serif;
@@ -1110,7 +1111,7 @@ footer .social-links li:first-child { margin-left: 0; }
    -ms-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
 
-   color: #fff;
+   color: #e30a0a;
    font-size: 21px;
    line-height: 60px;
  	border-radius: 100%;
