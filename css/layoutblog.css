@@ -53,7 +53,7 @@ header .banner {
    margin: 0 auto;
    width: 85%;
    padding-bottom: 30px;
-   text-align: center;
+   text-align: left;
 }
 
 header .banner-text { width: 100%; }
@@ -255,7 +255,7 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #articles {
-   background: #f5f7f4;
+   background: #fefffd;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
@@ -275,7 +275,7 @@ ul#nav li.current a { color: #F06000; }
    margin-left: -120px;
 }
 #articles h3 {
-   font: 10px/30px 'opensans-bold', sans-serif;
+   font: px/30px 'opensans-bold', sans-serif;
    color: #0b3ef4;
 }
 
@@ -525,7 +525,7 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   background: #ebeeee;
+   background: #ffffff;
    padding-top: 90px;
    padding-bottom: 60px;
 }
@@ -628,7 +628,7 @@ ul#nav li.current a { color: #F06000; }
 /* popup modal */
 .popup-modal {
 	max-width: 550px;
-	background: #fff;
+	background: #f3f1f1;
 	position: relative;
 	margin: 0 auto;
 }
@@ -740,7 +740,7 @@ call-to-action .button {
 */
 #call-to-action .button:hover,
 #call-to-action .button:active {
-   background: #FFFFFF;
+   background: #f6f2f2;
    color: #0D0D0D;
 }
 #call-to-action p span {
@@ -771,7 +771,7 @@ call-to-action .button {
    font: 18px/24px 'opensans-bold', sans-serif;   
    text-transform: uppercase;
    letter-spacing: 3px;
-   color: #fff;
+   color: #fffbfb;
 }
 #testimonials h1 span { display: none; }
 #testimonials .header-col { padding-top: 9px; }
@@ -783,7 +783,7 @@ call-to-action .button {
    line-height: 72px;
    text-align: left;
    float: left;
-   color: #fff;
+   color: #faf9f9;
 }
 
 /*	Blockquotes */
@@ -799,14 +799,14 @@ call-to-action .button {
    padding: 0;
    font-size: 24px;
    line-height: 48px;
-   color: #fff
+   color: #f9f7f7
 }
 #testimonials blockquote cite {
    display: block;
    font-size: 12px;
    font-style: normal;
    line-height: 18px;
-   color: #fff;
+   color: #f7efef;
 }
 #testimonials blockquote cite:before { content: "\2014 \0020"; }
 #testimonials blockquote cite a,
@@ -892,7 +892,7 @@ call-to-action .button {
     background: rgba(255, 255, 255, .7);
 }
 .flex-control-paging li a.flex-active {
-    background: #fff;
+    background: #ffffff;
     background: rgba(255, 255, 255, .9);
     cursor: default;
 }
@@ -986,7 +986,7 @@ call-to-action .button {
 }
 #contact button.submit:hover {
 	color: #0D0D0D;
-	background: #fff;
+	background: #ea1818;
 }
 #contact span.required {
 	color: #11ABB0;
@@ -1045,7 +1045,7 @@ footer {
    font-size: 14px;
    text-align: center;
    position: relative;
-}
+}    
 
 footer a, footer a:visited { color: #525252; }
 footer a:hover, footer a:focus { color: #fff; }
