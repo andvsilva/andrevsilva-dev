@@ -52,25 +52,8 @@
 			    <header class="blog-post-header" >
 				    <h2 class="title mb-2 text-center" > A Life of Freedom - Explore The Way To Be Financially Free</h2>
 				    <div class="meta mb-3" style="text-align: center;">
-						<span class="date" id="publish-date"></span>
+						<span class="date" id="publish-date"> Published on January 10, 2025</span>
 					  </div>
-					  
-					  <script>
-						// Definir a data atual automaticamente
-						const publishDateElement = document.getElementById('publish-date');
-						const now = new Date();
-						const options = { year: 'numeric', month: 'long', day: 'numeric' };
-						publishDateElement.textContent = `Published on ${now.toLocaleDateString('en-US', options)}`;
-					  
-						// Calcular tempo estimado de leitura
-						const articleContent = document.querySelector('article'); // Ajuste o seletor para o seu artigo
-						const wordsPerMinute = 200; // Velocidade média de leitura
-						const text = articleContent ? articleContent.innerText : '';
-						const wordCount = text.split(/\s+/).length;
-						const readTime = Math.ceil(wordCount / wordsPerMinute);
-						const readTimeElement = document.getElementById('read-time');
-						readTimeElement.textContent = `${readTime} min read`;
-					  </script>
 					  
 			    </header>
 			    
