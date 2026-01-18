@@ -50,10 +50,11 @@
    /* About Section
    ------------------------------------------------------------------- */
    #about .profile-pic {
-      width: 114px;
-      height: 114px;
-      margin-left: 12px;
-   }
+               width: 250px;        /* ajuste como quiser */
+               height: 320px;       /* retangular */
+               border-radius: 12px;  /* cantos levemente arredondados (opcional) */
+               object-fit: cover;   /* mantém proporção do rosto */
+            }
    #about .contact-details { width: 50%; }
    #about .download { width: 50%; }
 

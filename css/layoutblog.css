@@ -207,10 +207,10 @@ ul#nav li.current a { color: #F06000; }
    color: #f5f0f4;
 }
 #about .profile-pic {
-   position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
+  width: 250px;        /* ajuste como quiser */
+  height: 320px;       /* retangular */
+  border-radius: 12px;  /* cantos levemente arredondados (opcional) */
+  object-fit: cover;   /* mantém proporção do rosto */
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
