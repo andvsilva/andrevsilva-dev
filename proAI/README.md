@@ -1,5 +1,7 @@
 
-# 📘 Projeto Avaliação Integrada – Automatização da Correção - [Presentation - proAI]([text](https://docs.google.com/presentation/d/1lxjV3QgG1j5JAd5nRHdIxqSP_dIMWLbt_S3zNOyn1aU/edit?slide=id.p1#slide=id.p1))
+# 📘 Projeto Avaliação Integrada – Automatização da Correção - [Presentation - proAI](https://docs.google.com/presentation/d/1lxjV3QgG1j5JAd5nRHdIxqSP_dIMWLbt_S3zNOyn1aU/edit?slide=id.p1#slide=id.p1) 
+
+-  [in PDF about the project](https://drive.google.com/file/d/15RpbLFfmg18gO9IXZr7jOl5atfx8yKnB/view?usp=sharing)
 
 ## 📌 Descrição
 
