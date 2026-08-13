@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análise de Dados com Python — Datasets para Iniciantes</title>
+
+<style>
+:root{
+  --bg:#0b1020;
+  --surface:#121a2b;
+  --surface2:#182238;
+  --text:#eef2ff;
+  --muted:#9aa7bf;
+  --accent:#7c9cff;
+  --accent2:#55d6be;
+  --border:#26324b;
+  --shadow:0 18px 50px rgba(0,0,0,.25);
+}
+
+[data-theme="light"]{
+  --bg:#f5f7fb;
+  --surface:#fff;
+  --surface2:#f0f4fb;
+  --text:#172033;
+  --muted:#647089;
+  --accent:#496ee8;
+  --accent2:#149b83;
+  --border:#dce3ef;
+  --shadow:0 12px 35px rgba(25,40,70,.12);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:1180px;
+  margin:auto;
+  padding:28px 20px 60px;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  margin-bottom:48px;
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:-.5px;
+  font-size:20px;
+}
+
+.logo span{
+  color:var(--accent);
+}
+
+button{
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+button:hover{
+  border-color:var(--accent);
+}
+
+.hero{
+  padding:42px;
+  border:1px solid var(--border);
+  border-radius:24px;
+  background:linear-gradient(
+    135deg,
+    var(--surface),
+    var(--surface2)
+  );
+  box-shadow:var(--shadow);
+}
+
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:999px;
+  background:rgba(124,156,255,.14);
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
+}
+
+h1{
+  font-size:clamp(34px,5vw,58px);
+  line-height:1.05;
+  letter-spacing:-2px;
+  margin:16px 0;
+}
+
+.hero p{
+  max-width:720px;
+  color:var(--muted);
+  font-size:17px;
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:28px 0;
+}
+
+input{
+  flex:1;
+  min-width:240px;
+  padding:12px 15px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  outline:none;
+  font-size:14px;
+}
+
+input:focus{
+  border-color:var(--accent);
+}
+
+.filter{
+  padding:9px 13px;
+}
+
+.filter.active{
+  background:var(--accent);
+  color:white;
+  border-color:var(--accent);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(
+    auto-fit,
+    minmax(290px,1fr)
+  );
+  gap:18px;
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    border-color .2s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+  border-color:var(--accent);
+}
+
+.number{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+}
+
+.card h2{
+  font-size:20px;
+  margin:5px 0;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+  min-height:66px;
+}
+
+.meta{
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin:8px 0 18px;
+}
+
+.tag{
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:var(--surface2);
+  color:var(--muted);
+}
+
+.level{
+  color:var(--accent2);
+  font-weight:700;
+  font-size:14px;
+}
+
+.actions{
+  display:flex;
+  gap:9px;
+  margin-top:auto;
+}
+
+a.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  padding:10px 13px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:700;
+  border:1px solid var(--border);
+  color:var(--text);
+  flex:1;
+  transition:.2s ease;
+}
+
+a.btn:hover{
+  transform:translateY(-1px);
+  border-color:var(--accent);
+}
+
+a.primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:white;
+}
+
+a.primary:hover{
+  opacity:.9;
+}
+
+a.download{
+  background:var(--surface2);
+}
+
+footer{
+  margin-top:45px;
+  padding-top:20px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+  font-size:13px;
+}
+
+.empty{
+  display:none;
+  color:var(--muted);
+  padding:30px 0;
+  text-align:center;
+}
+
+@media(max-width:650px){
+
+  header{
+    margin-bottom:25px;
+  }
+
+  .hero{
+    padding:28px;
+  }
+
+  h1{
+    letter-spacing:-1px;
+  }
+
+  .actions{
+    flex-direction:column;
+  }
+
+  a.btn{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+  <div class="logo">
+    Python<span>DataLab</span>
+  </div>
+
+  <button id="themeBtn">
+    ☀️ Modo claro
+  </button>
+
+</header>
+
+
+<section class="hero">
+
+  <span class="badge">
+    INICIANTE • PYTHON • PANDAS
+  </span>
+
+  <h1>
+    Datasets para começar a aprender Análise de Dados
+  </h1>
+
+  <p>
+    Uma coleção selecionada para estudantes que estão começando
+    com Python, Pandas, estatística e visualização de dados.
+    Comece com dados simples, faça perguntas, limpe os dados
+    e desenvolva sua primeira análise.
+  </p>
+
+</section>
+
+
+<div class="filters">
+
+  <input
+    id="search"
+    type="search"
+    placeholder="Pesquisar datasets..."
+    aria-label="Pesquisar datasets"
+  >
+
+  <button
+    class="filter active"
+    data-filter="all">
+    Todos
+  </button>
+
+  <button
+    class="filter"
+    data-filter="iniciante">
+    Iniciante
+  </button>
+
+  <button
+    class="filter"
+    data-filter="estatística">
+    Estatística
+  </button>
+
+  <button
+    class="filter"
+    data-filter="visualização">
+    Visualização
+  </button>
+
+  <button
+    class="filter"
+    data-filter="negócios">
+    Negócios
+  </button>
+
+</div>
+
+
+<div class="grid" id="grid"></div>
+
+<div class="empty" id="empty">
+  Nenhum dataset corresponde à sua pesquisa.
+</div>
+
+
+<footer>
+
+  Os links "Abrir no Kaggle" levam às páginas originais
+  dos datasets.
+
+  Os botões "Baixar" levam aos arquivos armazenados
+  no Google Drive.
+
+  Verifique a licença e os requisitos de atribuição
+  de cada dataset antes de redistribuí-lo.
+
+</footer>
+
+</div>
+
+
+<script>
+
+/*
+===========================================================
+DATASETS
+===========================================================
+*/
+
+const datasets = [
+
+  {
+    n:"01",
+    name:"Espécies de Íris",
+    level:"Beginner",
+
+    desc:
+      "Dataset clássico e pequeno com medidas de flores. " +
+      "Excelente para aprender DataFrames, estatística " +
+      "descritiva e gráficos básicos.",
+
+    tags:[
+      "iniciante",
+      "estatística",
+      "visualização"
+    ],
+
+    url:
+      "https://www.kaggle.com/datasets/uciml/iris",
+
+    download:
+      "https://drive.google.com/file/d/1lmg6VTyweT5iPSKhdAW_1U3fSryLiwQp/view?usp=sharing"
+  },
+
+
+  {
+    n:"02",
+    name:"Desempenho de Estudantes em Exames",
+    level:"Beginner",
+
+    desc:
+      "1.000 estudantes com notas de matemática, leitura " +
+      "e escrita, além de variáveis demográficas e educacionais.",
+
+    tags:[
+      "iniciante",
+      "estatística",
+      "visualização"
+    ],
+
+    url:
+      "https://www.kaggle.com/datasets/spscientist/students-performance-in-exams",
+
+    download:
+      "https://drive.google.com/file/d/1ZVU963TFVksRG1gxWZx3c-zpl48SLDHi/view?usp=sharing"
+  },
+
+
+  {
+    n:"03",
+    name:"Titanic",
+    level:"Beginner",
+
+    desc:
+      "Uma introdução clássica à limpeza de dados, " +
+      "valores ausentes, agrupamento, variáveis categóricas " +
+      "e visualização.",
+
+    tags:[
+      "iniciante",
+      "estatística",
+      "visualização"
+    ],
+
+    url:
+      "https://www.kaggle.com/competitions/titanic/data",
+
+    download:
+      "https://drive.google.com/file/d/1E8NBb0QXzP8PxJUINCzHKncAU6B1WAQT/view?usp=sharing"
+  },
+
+
+  {
+    n:"04",
+    name:"Filmes e Séries da Netflix",
+    level:"Beginner+",
+
+    desc:
+      "Explore categorias, datas de lançamento, países, " +
+      "classificações e tendências de conteúdo usando Pandas.",
+
+    tags:[
+      "visualização",
+      "estatística"
+    ],
+
+    url:
+      "https://www.kaggle.com/datasets/shivamb/netflix-shows",
+
+    download:
+      "https://drive.google.com/file/d/1aQfFHU94IsdDlFPYuNADID0NrLCXV3LZ/view?usp=sharing"
+  },
+
+
+  {
+    n:"05",
+    name:"Vendas de Videogames",
+    level:"Beginner+",
+
+    desc:
+      "Analise vendas por plataforma, gênero, editora " +
+      "e região. Ideal para exercícios com groupby e rankings.",
+
+    tags:[
+      "estatística",
+      "visualização",
+      "negócios"
+    ],
+
+    url:
+      "https://www.kaggle.com/datasets/gregorut/videogamesales",
+
+    download:
+      "https://drive.google.com/file/d/1patVONP6aHcibeMIg4KULnzH4JGZy0Lj/view?usp=sharing"
+  },
+
+
+  {
+    n:"06",
+    name:"Músicas do Spotify",
+    level:"Intermediate",
+
+    desc:
+      "Explore características de áudio como energia, " +
+      "dançabilidade, volume e popularidade.",
+
+    tags:[
+      "estatística",
+      "visualização"
+    ],
+
+    url:
+      "https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset",
+
+    download:
+      "https://drive.google.com/file/d/1orOJjVLG0SmWeqgayjj1ENWl0KNtshb9/view?usp=sharing"
+  },
+
+
+  {
+    n:"07",
+    name:"Relatório Mundial da Felicidade",
+    level:"Intermediate",
+
+    desc:
+      "Compare países e explore relações entre felicidade " +
+      "e indicadores socioeconômicos.",
+
+    tags:[
+      "estatística",
+      "visualização"
+    ],
+
+    url:
+      "https://www.kaggle.com/datasets/ajaypalsinghlo/world-happiness-report-2023",
+
+    download:
+      "https://drive.google.com/file/d/1xQ63xyPGFOOKPhwsBKNkoZ96YxNTvaZc/view?usp=sharing"
+  }
+
+];
+
+
+/*
+===========================================================
+ELEMENTOS
+===========================================================
+*/
+
+const grid =
+  document.getElementById("grid");
+
+const search =
+  document.getElementById("search");
+
+const empty =
+  document.getElementById("empty");
+
+let active = "all";
+
+
+/*
+===========================================================
+RENDER DATASETS
+===========================================================
+*/
+
+function render(){
+
+  const q =
+    search.value
+      .toLowerCase()
+      .trim();
+
+
+  const filtered =
+    datasets.filter(d =>
+
+      (
+        active === "all" ||
+        d.tags.includes(active)
+      )
+
+      &&
+
+      (
+        d.name +
+        " " +
+        d.desc +
+        " " +
+        d.tags.join(" ")
+      )
+      .toLowerCase()
+      .includes(q)
+
+    );
+
+
+  grid.innerHTML =
+    filtered.map(d => `
+
+      <article class="card">
+
+        <div class="number">
+          DATASET ${d.n}
+        </div>
+
+
+        <h2>
+          ${d.name}
+        </h2>
+
+
+        <div class="level">
+          ${d.level}
+        </div>
+
+
+        <p>
+          ${d.desc}
+        </p>
+
+
+        <div class="meta">
+
+          ${d.tags
+            .map(t =>
+              `<span class="tag">#${t}</span>`
+            )
+            .join("")
+          }
+
+        </div>
+
+
+        <div class="actions">
+
+          <a
+            class="btn primary"
+            href="${d.url}"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Abrir no Kaggle ↗
+
+          </a>
+
+
+          <a
+            class="btn download"
+            href="${d.download}"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Baixar ↓
+
+          </a>
+
+        </div>
+
+      </article>
+
+    `).join("");
+
+
+  empty.style.display =
+    filtered.length
+      ? "none"
+      : "block";
+}
+
+
+/*
+===========================================================
+FILTERS
+===========================================================
+*/
+
+document
+  .querySelectorAll(".filter")
+  .forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      document
+        .querySelectorAll(".filter")
+        .forEach(b =>
+          b.classList.remove("active")
+        );
+
+
+      btn.classList.add("active");
+
+
+      active =
+        btn.dataset.filter;
+
+
+      render();
+
+    });
+
+  });
+
+
+/*
+===========================================================
+SEARCH
+===========================================================
+*/
+
+search.addEventListener(
+  "input",
+  render
+);
+
+
+/*
+===========================================================
+DARK / LIGHT MODE
+===========================================================
+*/
+
+const saved =
+  localStorage.getItem("theme");
+
+
+if(saved){
+
+  document.documentElement
+    .dataset.theme = saved;
+
+}
+
+
+function updateTheme(){
+
+  const dark =
+    document.documentElement
+      .dataset.theme !== "light";
+
+
+  document.getElementById("themeBtn")
+    .textContent =
+      dark
+        ? "☀️ Modo claro"
+        : "🌙 Modo escuro";
+}
+
+
+document
+  .getElementById("themeBtn")
+  .onclick = () => {
+
+    const next =
+      document.documentElement
+        .dataset.theme === "light"
+        ? "dark"
+        : "light";
+
+
+    document.documentElement
+      .dataset.theme = next;
+
+
+    localStorage.setItem(
+      "theme",
+      next
+    );
+
+
+    updateTheme();
+
+  };
+
+
+/*
+===========================================================
+INITIALIZE
+===========================================================
+*/
+
+updateTheme();
+render();
+
+</script>
+
+</body>
+</html>
